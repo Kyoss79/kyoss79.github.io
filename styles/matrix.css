@@ -12,95 +12,68 @@ body {
   text-transform: uppercase;
   top: 0;
   width: 17px; }
+  .line span {
+    color: #0f0;
+    opacity: 0; }
 
-.item-0 {
-  color: rgba(0, 255, 0, 0); }
+.line .item-0 {
+  opacity: 0; }
 
-.item-1 {
-  color: rgba(0, 255, 0, 0.0333333333); }
+.line .item-1 {
+  opacity: 0.05; }
 
-.item-2 {
-  color: rgba(0, 255, 0, 0.0666666667); }
+.line .item-2 {
+  opacity: 0.1; }
 
-.item-3 {
-  color: rgba(0, 255, 0, 0.1); }
+.line .item-3 {
+  opacity: 0.15; }
 
-.item-4 {
-  color: rgba(0, 255, 0, 0.1333333333); }
+.line .item-4 {
+  opacity: 0.2; }
 
-.item-5 {
-  color: rgba(0, 255, 0, 0.1666666667); }
+.line .item-5 {
+  opacity: 0.25; }
 
-.item-6 {
-  color: rgba(0, 255, 0, 0.2); }
+.line .item-6 {
+  opacity: 0.3; }
 
-.item-7 {
-  color: rgba(0, 255, 0, 0.2333333333); }
+.line .item-7 {
+  opacity: 0.35; }
 
-.item-8 {
-  color: rgba(0, 255, 0, 0.2666666667); }
+.line .item-8 {
+  opacity: 0.4; }
 
-.item-9 {
-  color: rgba(0, 255, 0, 0.3); }
+.line .item-9 {
+  opacity: 0.45; }
 
-.item-10 {
-  color: rgba(0, 255, 0, 0.3333333333); }
+.line .item-10 {
+  opacity: 0.5; }
 
-.item-11 {
-  color: rgba(0, 255, 0, 0.3666666667); }
+.line .item-11 {
+  opacity: 0.55; }
 
-.item-12 {
-  color: rgba(0, 255, 0, 0.4); }
+.line .item-12 {
+  opacity: 0.6; }
 
-.item-13 {
-  color: rgba(0, 255, 0, 0.4333333333); }
+.line .item-13 {
+  opacity: 0.65; }
 
-.item-14 {
-  color: rgba(0, 255, 0, 0.4666666667); }
+.line .item-14 {
+  opacity: 0.7; }
 
-.item-15 {
-  color: rgba(0, 255, 0, 0.5); }
+.line .item-15 {
+  opacity: 0.75; }
 
-.item-16 {
-  color: rgba(0, 255, 0, 0.5333333333); }
+.line .item-16 {
+  opacity: 0.8; }
 
-.item-17 {
-  color: rgba(0, 255, 0, 0.5666666667); }
+.line .item-17 {
+  opacity: 0.85; }
 
-.item-18 {
-  color: rgba(0, 255, 0, 0.6); }
+.line .item-18 {
+  opacity: 0.9; }
 
-.item-19 {
-  color: rgba(0, 255, 0, 0.6333333333); }
-
-.item-20 {
-  color: rgba(0, 255, 0, 0.6666666667); }
-
-.item-21 {
-  color: rgba(0, 255, 0, 0.7); }
-
-.item-22 {
-  color: rgba(0, 255, 0, 0.7333333333); }
-
-.item-23 {
-  color: rgba(0, 255, 0, 0.7666666667); }
-
-.item-24 {
-  color: rgba(0, 255, 0, 0.8); }
-
-.item-25 {
-  color: rgba(0, 255, 0, 0.8333333333); }
-
-.item-26 {
-  color: rgba(0, 255, 0, 0.8666666667); }
-
-.item-27 {
-  color: rgba(0, 255, 0, 0.9); }
-
-.item-28 {
-  color: rgba(0, 255, 0, 0.9333333333); }
-
-.item-29 {
-  color: rgba(0, 255, 0, 0.9666666667); }
+.line .item-19 {
+  opacity: 0.95; }
 
 /*# sourceMappingURL=matrix.css.map */

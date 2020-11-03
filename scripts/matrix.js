@@ -5,15 +5,13 @@ const wH = body.clientHeight;
 
 let start;
 let init = false;
-let nrLines = 100;
+let nrLines = 50;
 let frameCounter = 0;
 const lines = [];
 
 const tick = (timestamp) => {
-    console.log('tick');
-
     if (!init) {
-        Array.from(Array(30)).forEach( (x, i) => {
+        Array.from(Array(nrLines)).forEach( (x, i) => {
             const offset = getRandomInt(-30, 40);
             const line = matrixLine();
             line.init(offset);
@@ -23,14 +21,14 @@ const tick = (timestamp) => {
     }
 
     if (++frameCounter % 3 === 0) {
-        if (lines.length < 30) {
+        if (lines.length < nrLines) {
             const line = matrixLine();
             line.init();
             lines.push(line);
         }
 
         lines.forEach( (line, index) => {
-            if (line.redraw() > 50) {
+            if (line.redraw() > 70) {
                 line.destroy();
                 lines.splice(index, 1);
             }
@@ -46,9 +44,12 @@ const matrixLine = () => {
     let timer = -20;
     let container;
     let scale;
+    let speed;
+    let progress = 0;
 
     const init = (offset = 0) => {
         timer = offset || 0;
+        speed = getRandomInt(1,4);
         scale = getRandomInt(50, 200);
         container = document.createElement('div');
         container.classList.add('line');
@@ -56,14 +57,14 @@ const matrixLine = () => {
 
         // get random characters
         let randomStr = '';
-        Array.from(Array(80)).forEach( (x, i) => {
+        Array.from(Array(150)).forEach( (x, i) => {
             randomStr += '<span>' + getRandomChar() + '</span> ';
         });
 
         container.innerHTML = randomStr;
 
         // position randomly on X axis
-        container.style.top = getRandomInt(-100, 0) + 'px';
+        container.style.top = getRandomInt(-300, -200) + 'px';
         container.style.left = getRandomInt(25, wW - 25)  + getRandomInt(-25 , 25) + 'px';
 
         body.append(container);
@@ -73,23 +74,26 @@ const matrixLine = () => {
         timer++;
 
         let spans = container.getElementsByTagName('span');
+        if (timer % speed === 0) {
+            progress++;
+        }
 
-        if (timer < 50) {
+        if (progress < 50) {
             for ( let i = 0; i < spans.length; i++) {
                 spans.item(i).className = '';
-                spans.item(i).className = 'item-' + (i -  timer);
+                spans.item(i).className = 'item-' + (i - progress);
             }
         } else {
             for ( let i = 0; i < spans.length; i++) {
                 spans.item(i).className = '';
 
-                if (i - timer > 0) {
-                    spans.item(i).className = 'item-' + (i -  timer);
+                if (i - progress > 0) {
+                    spans.item(i).className = 'item-' + (i -  progress);
                 }
             }
         }
 
-        return timer;
+        return progress;
     };
 
     const destroy = () => {

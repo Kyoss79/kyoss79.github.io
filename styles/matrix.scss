@@ -13,12 +13,17 @@ body {
   text-transform: uppercase;
   top: 0;
   width: 17px;
+
+  span {
+    color: #0f0;
+    opacity: 0;
+  }
 }
 
-$max: 30;
+$max: 20;
 @for $i from 0 to $max {
-  .item-#{$i} {
-    color: rgba(0, 255, 0, (1 / $max * $i));
+  .line .item-#{$i} {
+    opacity: 1 / $max * $i;
   }
 }
 
